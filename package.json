@@ -1,0 +1,19 @@
+{
+  "name": "fullstackweb",
+  "version": "1.0.0",
+  "description": "Nuestro Primer Proyecto nodejs",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OscarRiveros/PracticaFullStackWeb.git"
+  },
+  "author": "Oscar_Riveros",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OscarRiveros/PracticaFullStackWeb/issues"
+  },
+  "homepage": "https://github.com/OscarRiveros/PracticaFullStackWeb#readme"
+}

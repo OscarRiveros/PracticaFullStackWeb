@@ -20,3 +20,9 @@ footer {
 .btn-reserva {
   width: 100%;
 }
+
+.breadcrumb-simbol .breadcrumb-item + .breadcrumb-item::before {
+  content: "->>";
+
+  color: #408080;
+}

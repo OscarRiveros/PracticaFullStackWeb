@@ -22,7 +22,11 @@ footer {
 }
 
 .breadcrumb-simbol .breadcrumb-item + .breadcrumb-item::before {
-  content: "->>";
+  content: ">";
 
   color: #408080;
+}
+
+.footer-icon-address {
+  padding-right: 10px;
 }

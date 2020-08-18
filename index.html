@@ -75,27 +75,39 @@
       </nav>
       <div class="row">
         <div class="col-sm-4">
+          <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#funciona" aria-expanded="false" aria-controls="multiCollapse1">Como Funciona?</button>
+        </div>
+        <div class="col-sm-4">
+          <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#reserva" aria-expanded="false" aria-controls="multiCollapse1">Como Reservo?</button>
+        </div>
+        <div class="col-sm-4">
+          <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#pago" aria-expanded="false" aria-controls="multiCollapse1">Como Pago?</button>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-4 collapse multi-collapse" id="funciona">
           <h4>Como Funciona?</h4>
           <p>
             Es una pagina simple el cual te mostrara los diferentes hoteles
             disponibles.
           </p>
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-4 collapse multi-collapse" id="reserva">
           <h4>Donde la reserva</h4>
           <p>
             Puedes reservar hoteles , piezas, piletaas, dependiendo de tu
             localidad o destino
           </p>
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-4 collapse multi-collapse" id="pago">
           <h4>Como pago?</h4>
           <p>
             Se aceptan tarjetas de Credito y/o Debito
           </p>
         </div>
       </div>
-      <hr>
+      <hr />
       <div class="d-flex flex-wrap flex-row-reverse">
         <div
           class="card card-hotel d-flex flex-column justify-content-between ml-2"
@@ -114,7 +126,7 @@
             </p>
           </div>
           <div>
-            <button class="btn btn-primary btn-reserva">Learn more</button>
+              <button type="button" class="btn btn-primary btn-reserva" data-target="#contacto" data-toggle="modal">Reservar</button>
           </div>
         </div>
         <div
@@ -133,7 +145,7 @@
             </p>
           </div>
           <div>
-            <button class="btn btn-primary btn-reserva">Learn more</button>
+              <button type="button" class="btn btn-primary btn-reserva" data-target="#contacto" data-toggle="modal">Reservar</button>
           </div>
         </div>
         <div
@@ -153,7 +165,7 @@
             </p>
           </div>
           <div>
-            <button class="btn btn-primary btn-reserva">Learn more</button>
+              <button type="button" class="btn btn-primary btn-reserva" data-target="#contacto" data-toggle="modal">Reservar</button>
           </div>
         </div>
         <div
@@ -172,7 +184,7 @@
             </p>
           </div>
           <div>
-            <button class="btn btn-primary btn-reserva">Learn more</button>
+              <button type="button" class="btn btn-primary btn-reserva" data-target="#contacto" data-toggle="modal">Reservar</button>
           </div>
         </div>
         <div
@@ -191,7 +203,7 @@
             </p>
           </div>
           <div>
-            <button class="btn btn-primary btn-reserva">Learn more</button>
+              <button type="button" class="btn btn-primary btn-reserva" data-target="#contacto" data-toggle="modal">Reservar</button>
           </div>
         </div>
         <div
@@ -210,7 +222,7 @@
             </p>
           </div>
           <div>
-            <button class="btn btn-primary btn-reserva">Learn more</button>
+              <button type="button" class="btn btn-primary btn-reserva" data-target="#contacto" data-toggle="modal">Reservar</button>
           </div>
         </div>
         <div
@@ -229,7 +241,8 @@
             </p>
           </div>
           <div>
-            <button class="btn btn-primary btn-reserva">Learn more</button>
+            <button type="button" class="btn btn-primary btn-reserva" data-target="#contacto" data-toggle="modal">
+              Reservar</button>
           </div>
         </div>
         <div
@@ -248,13 +261,41 @@
             </p>
           </div>
           <div>
-            <button class="btn btn-primary btn-reserva">
-              <span class="oi oi-map-marker footer-icon-address"></span>Learn
-              more
+            <button type="button" class="btn btn-primary btn-reserva" data-target="#contacto" data-toggle="modal">
+              Reservar
             </button>
           </div>
         </div>
       </div>
+
+      <div class="modal fade" id="contacto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Contacto con el Hotel</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <label for="recipient-name" class="col-form-label">Tu email:</label>
+                  <input type="text" class="form-control" id="recipient-name">
+                </div>
+                <div class="form-group">
+                  <label for="recipient-name" class="col-form-label">Mensaje</label>
+                  <textarea class="form-control" id="message-text"></textarea>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-success">Enviar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
     <footer>
       <div class="row">

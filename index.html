@@ -118,7 +118,7 @@
             alt="Responsive image"
           />
           <div class="card-body">
-            <h5 class="card-title">Hotel Asturias</h5>
+            <h5 class="card-title" data-toggle="tooltip" data-placement="top" title="Los primeras reservan llevan descuento">Hotel Asturias</h5>
             <h6 class="card-subtitle text-muted">Austria</h6>
             <p class="card-text">
               is a simple hero unit, a simple jum botron-style component for
@@ -126,7 +126,7 @@
             </p>
           </div>
           <div>
-              <button type="button" class="btn btn-primary btn-reserva" data-target="#contacto" data-toggle="modal">Reservar</button>
+              <button type="button" class="btn btn-primary btn-reserva" data-toggle="popover" data-content="And here's some amazing content. It's very engaging. Right?">Reservar</button>
           </div>
         </div>
         <div
@@ -261,7 +261,7 @@
             </p>
           </div>
           <div>
-            <button type="button" class="btn btn-primary btn-reserva" data-target="#contacto" data-toggle="modal">
+            <button type="button" class="btn btn-primary btn-reserva" data-toggle="popover" data-content="And here's some amazing content. It's very engaging. Right?">
               Reservar
             </button>
           </div>
@@ -340,5 +340,12 @@
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/popper.js/dist/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script>
+      $(function(){
+        $("[data-toggle='tooltip']").tooltip();
+        $('[data-toggle="popover"]').popover();
+      });
+    </script>
   </body>
 </html>

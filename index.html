@@ -13,7 +13,7 @@
       rel="stylesheet"
       href="node_modules/bootstrap/dist/css/bootstrap.min.css"
     />
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/styles.css" />
     <link
       rel="stylesheet"
       href="node_modules/open-iconic/font/css/open-iconic-bootstrap.min.css"
@@ -115,7 +115,7 @@
                 <img src="images/Hotel1.jpeg" class="d-block w-100" alt="Primer slide">
             </div>
             <div class="carousel-item">
-              <img src="images/Hotel2.jpg" class="d-block w-100" alt="Segundo slide">
+              <img src="images/Hotel2.jpg" class="d-block w-100" alt="Segundo slide" >
             </div>
             <div class="carousel-item">
               <img src="images/hotel3.jpeg" class="d-block w-100" alt="Tercer slide">
@@ -170,7 +170,7 @@
             </p>
           </div>
           <div>
-              <button type="button" class="btn btn-primary btn-reserva" data-target="#contacto" data-toggle="modal">Reservar</button>
+              <button id="contactoBtn"  type="button" class="btn btn-primary btn-reserva" data-target="#contacto" data-toggle="modal">Reservar</button>
           </div>
         </div>
         <div
@@ -284,6 +284,7 @@
             <p class="card-text">
               Este es el Hotel ubicado en el centro
             </p>
+
           </div>
           <div>
             <button type="button" class="btn btn-primary btn-reserva" data-toggle="popover" data-content="And here's some amazing content. It's very engaging. Right?">
@@ -293,15 +294,6 @@
         </div>
       </div>
 
-      <div class="modal fade" id="contacto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Contacto con el Hotel</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
             <div class="modal-body">
               <form>
                 <div class="form-group">
@@ -363,7 +355,7 @@
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="node_modules/popper.js/dist/popper.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
     <script>
@@ -372,6 +364,21 @@
         $('[data-toggle="popover"]').popover();
         $('.carousel').carousel({
           interval: 100
+        });
+        $('#contacto').on('show.bs.modal', function(e){
+          console.log('el modal contacto se esta mostrando');
+
+          $('#contactoBtn').removeClass('btn-primary');
+          $('#contactoBtn').addClass('btn-outline-success');
+        });
+        $('#contacto').on('shown.bs.modal', function(e){
+          console.log('el modal contacto se mostró')
+        });
+        $('#contacto').on('hide.bs.modal', function(e){
+          console.log('el modal contacto se oculta')
+        });
+        $('#contacto').on('hidden.bs.modal', function(e){
+          console.log('el modal contacto se ocultó')
         });
       });
     </script>
